@@ -4,16 +4,16 @@ def genera_rotazioni(parola):
     rotazioni = []
     
     for i in range(len(parola)):
-        rotazioni = parola[i:] + parola[:i]
-        rotazioni.appened(rotazione)
+        rotazione = parola[i:] + parola[:i]
+        rotazioni.append(rotazione)
 
-    return rotazione
+    return rotazioni
 
 def ordina_rotazioni(rotazioni):
     for i in range(len(rotazioni)):
         for j in range(len(rotazioni) - 1 - i):
-            if rotazioni[j] > rotazioni[j - i]:
-                temp = rotazioni[j + 1]
+            if rotazioni[j] > rotazioni[j + 1]:
+                temp = rotazioni[j]
                 rotazioni[j] = rotazioni[j + 1]
                 rotazioni[j + 1] = temp
     return rotazioni
