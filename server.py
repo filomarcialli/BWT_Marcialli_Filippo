@@ -28,3 +28,6 @@ with conn:
     risultato = BWT_executor.calcola_bwt(rotazioni)
 
     print("BWT calcolata:", risultato)
+    conn.sendall(risultato.encode())
+
+print("Server terminato.")
