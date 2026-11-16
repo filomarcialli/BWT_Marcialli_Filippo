@@ -9,3 +9,4 @@ parola = input("Inserisci la parola da inviare al server: ")
 
 with sck.socket(sck.AF_INET, sck.SOCK_STREAM) as client:
     client.connect((IP, PORTA))
+    client.sendall(parola.encode())
