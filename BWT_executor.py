@@ -26,18 +26,18 @@ def calcola_bwt(rotazioni):
     
     return risultato
 
+if __name__ == "__main__":
+    parola = input("Inserisci una parola: ")
+    parola = parola + "$"
 
-parola = input("Inserisci una parola: ")
-parola = parola + "$"
+    rotazioni = genera_rotazioni(parola)
+    rotazioni = ordina_rotazioni(rotazioni)
 
-rotazioni = genera_rotazioni(parola)
-rotazioni = ordina_rotazioni(rotazioni)
+    print("Rotazioni ordinate: ")
+    for riga in rotazioni:
+        print(riga)
 
-print("Rotazioni ordinate: ")
-for riga in rotazioni:
-    print(riga)
-
-risultato = calcola_bwt(rotazioni)
-print("\nBWT = ", risultato)
+    risultato = calcola_bwt(rotazioni)
+    print("\nBWT = ", risultato)
 
 
